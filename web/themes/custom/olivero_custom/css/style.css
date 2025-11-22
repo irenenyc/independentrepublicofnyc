@@ -1,0 +1,33 @@
+.grid-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-card__band {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 1rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+.grid-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.grid-card__bio {
+  font-size: .5rem;
+  line-height: 1;
+}
+

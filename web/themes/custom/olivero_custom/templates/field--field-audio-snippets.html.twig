@@ -1,0 +1,24 @@
+
+{# Attach the JS/CSS library for audio snippets #}
+{% do attach_library('olivero_custom/audio_snippets') %}
+
+
+{#
+  Renders audio snippets as clickable links with data-time.
+#}
+{% if label %}
+  <h2>{{ label }}</h2>
+{% endif %}
+
+<div class="field--name-field-audio-snippets">
+  {% for item in items %}
+    {% set lines = item.content|render|striptags|trim|split("\n") %}
+    {% for line in lines %}
+      {% set parts = line|split('|') %}
+      {% if parts|length == 2 %}
+        <a href="#" data-time="{{ parts[0]|trim }}">{{ parts[1]|trim }}</a><br>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>
+

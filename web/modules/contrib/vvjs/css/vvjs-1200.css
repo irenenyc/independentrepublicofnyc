@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Views Tabs
+ *
+ * Filename:     vvjs-1200.css
+ * Website:      https://www.flashwebcenter.com
+ * Developer:    Alaa Haddad https://www.alaahaddad.com.
+ */
+@media (min-width:75rem) {
+  .vvjs.br-1200.arrows-top-big .slide-indicators {
+    opacity: 0.2;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  .vvjs.br-1200.arrows-top-big .slide-indicators:hover {
+    opacity: 1;
+    outline: none;
+    background-color: transparent !important;
+  }
+
+  .vvjs.br-1200 .slide-indicators.arrows-sides-big {
+    opacity: 1;
+  }
+
+  .vvjs.br-1200.arrows-sides-big .vvjs-inner {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+  }
+
+  .vvjs.br-1200.arrows-sides-big .slide-indicators .next-arrow {
+    right: -60px;
+  }
+
+  .vvjs.br-1200.arrows-sides-big .slide-indicators .prev-arrow {
+    left: -60px;
+  }
+
+}
+
+
+@media (max-width:74.99875rem) {
+  html .vvjs.br-1200.arrows-top-big .slide-indicators,
+  html .vvjs.br-1200.arrows-sides-big .slide-indicators {
+    display: none !important;
+  }
+
+}

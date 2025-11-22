@@ -1,0 +1,26 @@
+global-styling:
+  version: 1.x
+  css:
+    theme: 
+      css/style.css: {}
+  js: {}
+
+audio_snippets:
+  version: 1.x
+  js:
+    js/audio-snippets.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+audio_timestamp:
+  version: 1.x
+  js:
+    js/audio-timestamp.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+

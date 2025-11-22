@@ -1,12 +1,13 @@
-/vendor/
-/web/sites/default/files/
-/web/core/
-/web/modules/
-/web/themes/
+
+web/sites/default/files/2025-10/Marisa_DeDominicis.mp3
+web/sites/default/files/2025-10/Tauno_Biltsted.mp3
 
 
 # Allow sync folder inside files
 !/web/sites/default/files/sync/
+
+
+
 
 
 .ddev/

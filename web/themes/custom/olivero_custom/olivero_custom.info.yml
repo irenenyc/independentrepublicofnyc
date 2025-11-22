@@ -1,0 +1,11 @@
+name: 'Olivero Custom'
+type: theme
+base theme: olivero
+description: 'Subtheme of Olivero for customization'
+package: Custom
+core_version_requirement: ^10
+libraries:
+  - olivero_custom/global-styling
+regions:
+  content: Content
+

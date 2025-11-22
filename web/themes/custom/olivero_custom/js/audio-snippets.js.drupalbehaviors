@@ -1,0 +1,18 @@
+(function ($, Drupal) {
+  Drupal.behaviors.audioTimestampLinks = {
+    attach: function (context, settings) {
+      $(context).find('a[data-time]').once('audioTimestampLinks').on('click', function (e) {
+        e.preventDefault();
+
+        var time = $(this).data('time');
+        var audioPlayer = $('audio')[0]; // Assuming you have one audio player on the page
+
+        if (audioPlayer) {
+          audioPlayer.currentTime = time;
+          audioPlayer.play();
+        }
+      });
+    }
+  };
+})(jQuery, Drupal);
+

@@ -1,0 +1,12 @@
+name: 'Views Vanilla Javascript Slideshow'
+type: module
+description: 'Provides a Vanilla Javascript Slideshow format for Views.'
+core_version_requirement: ^10 || ^11
+package: Views
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2025-06-29
+version: '1.0.19'
+project: 'vvjs'
+datestamp: 1751235640

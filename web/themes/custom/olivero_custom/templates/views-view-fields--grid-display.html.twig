@@ -1,0 +1,24 @@
+{#
+  Custom template for the "grid_display" view (page display).
+  Wraps the entire card in a single <a> so the whole thing is clickable.
+  Opens each node in a new tab.
+#}
+
+<a href="{{ path('entity.node.canonical', {'node': row._entity.id()}) }}"
+   class="grid-card"
+   target="_blank"
+   rel="noopener">
+  <div class="grid-card__image">
+    {{ fields.field_media_image.content }}
+  </div>
+
+  <div class="grid-card__band">
+    <div class="grid-card__title">
+      {{ fields.title.content|striptags }}
+    </div>
+    <div class="grid-card__bio">
+      {{ fields.field_grid_brief_bio.content|striptags }}
+    </div>
+  </div>
+</a>
+

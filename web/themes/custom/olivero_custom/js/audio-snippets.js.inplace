@@ -1,0 +1,38 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // **Updated selector to target only the correct container**
+  **document.querySelectorAll('.js-audio-snippets').forEach((container) => {**
+
+    // **Split lines based on line breaks**
+    const lines = container.textContent.trim().split('\n');
+
+    // **Clear the raw text before injecting links**
+    **container.innerHTML = '';**
+
+    lines.forEach(line => {
+      const [time, label] = line.split('|');
+
+      // **Ignore malformed lines**
+      **if (!time || !label) return;**
+
+      const link = document.createElement('a');
+      link.href = '#';
+      link.textContent = label.trim();
+
+      // **Make each link display on a new line**
+      **link.style.display = 'block';**
+
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const audio = document.querySelector('audio');
+        if (audio) {
+          audio.currentTime = parseInt(time, 10);
+          audio.play();
+        }
+      });
+
+      container.appendChild(link);
+    });
+
+  }); // end forEach
+});
+
