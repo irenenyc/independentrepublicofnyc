@@ -1,13 +1,12 @@
+# Drupal files directory (never gets committed)
+web/sites/default/files/
 
-web/sites/default/files/2025-10/Marisa_DeDominicis.mp3
-web/sites/default/files/2025-10/Tauno_Biltsted.mp3
-
-
-
-
-
-
-
-.ddev/
+# Settings
 web/sites/default/settings.php
-#sync is at /Projects/independentrepublicofnyc/config/ 
+
+# Local dev
+.ddev/
+
+# OS junk
+.DS_Store
+

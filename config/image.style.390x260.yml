@@ -1,0 +1,15 @@
+uuid: d334f272-8251-425e-aec0-378da513ee11
+langcode: en
+status: true
+dependencies: {  }
+name: 390x260
+label: ' 390×260'
+effects:
+  3666f118-a8d9-493b-bbc3-5bcb102867f0:
+    uuid: 3666f118-a8d9-493b-bbc3-5bcb102867f0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 390
+      height: 260
+      anchor: center-center
