@@ -1,0 +1,15 @@
+uuid: bf64dc89-1a96-419d-9c30-3af3c6c36200
+langcode: en
+status: true
+dependencies: {  }
+name: location_image
+label: location_image
+effects:
+  32a04bfb-bacd-4676-8e86-fa92933f3b42:
+    uuid: 32a04bfb-bacd-4676-8e86-fa92933f3b42
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false

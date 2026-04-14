@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * Implements hook_leaflet_map_info().
+ */
+function leaflet_map_switcheroo_leaflet_map_info() {
+  return [
+    'nyc_basemap' => [
+      'label' => 'NYC Basemap',
+      'description' => 'NYC DoITT basemap with labels',
+      'settings' => [
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => TRUE,
+        'doubleClickZoom' => TRUE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+        'minZoom' => 8,
+        'maxZoom' => 19,
+        'zoom' => 15,
+        'layerControl' => TRUE,
+        'layerControlOptions' => ['position' => 'topright'],
+      ],
+      'layers' => [
+        'NYC Basemap' => [
+          'urlTemplate' => 'https://maps{s}.nyc.gov/xyz/1.0.0/carto/basemap/{z}/{x}/{y}.jpg',
+          'options' => [
+            'maxZoom' => 19,
+            'subdomains' => ['1', '2', '3', '4'],
+            'attribution' => '© City of New York',
+          ],
+        ],
+        'NYC Labels' => [
+          'layer_type' => 'overlay',
+          'urlTemplate' => 'https://maps{s}.nyc.gov/tms/1.0.0/carto/label/{z}/{x}/{y}.png8',
+          'options' => [
+            'maxZoom' => 19,
+            'subdomains' => ['1', '2', '3', '4'],
+            'tms' => TRUE,
+          ],
+        ],
+      ],
+    ],
+  ];
+}

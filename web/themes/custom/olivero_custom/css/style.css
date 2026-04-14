@@ -54,3 +54,15 @@
   line-height: 1.25;
 }
 
+/* Makes LES Map span all grid columns so it's full screen */
+.path-les-map .view-content > div {
+  grid-column: 1 / -1;
+}
+
+
+
+/* Makes LOISAIDA Map span all grid columns so it's full screen */
+.path-loisaida-map .view-content > div {
+  grid-column: 1 / -1;
+} 
+

@@ -1,0 +1,7 @@
+name: 'Leaflet Map Switcheroo'
+type: module
+description: 'Adds NYC basemap tile layer'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - leaflet:leaflet

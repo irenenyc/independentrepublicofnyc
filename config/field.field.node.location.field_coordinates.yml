@@ -1,0 +1,21 @@
+uuid: eb1de626-4108-4bc5-bbe7-b6a2942af4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.location
+  module:
+    - geofield
+id: node.location.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: location
+label: coordinates
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield
