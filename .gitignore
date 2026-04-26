@@ -10,3 +10,4 @@ web/sites/default/settings.php
 # OS junk
 .DS_Store
 
+web/sites/default/settings.php
