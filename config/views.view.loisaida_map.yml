@@ -379,7 +379,7 @@ display:
           entity_source: __base_table
           name_field: name
           leaflet_tooltip:
-            value: ''
+            value: name
             options: '{"permanent":false,"direction":"center"}'
           leaflet_popup:
             value: '#rendered_view_fields'
