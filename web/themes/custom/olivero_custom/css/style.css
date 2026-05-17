@@ -69,6 +69,6 @@
 /*make images smooshed on phone */
 @media (max-width: 768px) {
   .grid-card__image {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
   }
 }
