@@ -1,0 +1,20 @@
+uuid: 9e44b87a-7c2b-4577-b724-27cec6caae8c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: bb_custom_primary_admin_actions
+theme: bb_custom
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

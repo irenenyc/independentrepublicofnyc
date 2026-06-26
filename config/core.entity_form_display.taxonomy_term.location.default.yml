@@ -1,19 +1,17 @@
-uuid: 8ae09674-c9d6-441c-a28f-9b3af8d7236f
+uuid: 4f6231c8-6a5c-41c6-b0f6-1016325961c8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.squats.field_coordinates
-    - field.field.taxonomy_term.squats.field_image
-    - taxonomy.vocabulary.squats
+    - field.field.taxonomy_term.location.field_coordinates
+    - taxonomy.vocabulary.location
   module:
     - geofield
-    - media_library
     - path
     - text
-id: taxonomy_term.squats.default
+id: taxonomy_term.location.default
 targetEntityType: taxonomy_term
-bundle: squats
+bundle: location
 mode: default
 content:
   description:
@@ -26,17 +24,10 @@ content:
     third_party_settings: {  }
   field_coordinates:
     type: geofield_latlon
-    weight: 102
-    region: content
-    settings:
-      html5_geolocation: false
-    third_party_settings: {  }
-  field_image:
-    type: media_library_widget
     weight: 101
     region: content
     settings:
-      media_types: {  }
+      html5_geolocation: false
     third_party_settings: {  }
   name:
     type: string_textfield

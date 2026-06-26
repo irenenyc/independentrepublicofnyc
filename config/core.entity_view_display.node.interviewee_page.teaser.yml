@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.interviewee_page.field_grid_image
     - field.field.node.interviewee_page.field_interviewee_image
     - field.field.node.interviewee_page.field_oh_interview_file
+    - field.field.node.interviewee_page.field_places
     - field.field.node.interviewee_page.field_taxonomy_squats
     - node.type.interviewee_page
   module:
@@ -35,4 +36,5 @@ hidden:
   field_grid_image: true
   field_interviewee_image: true
   field_oh_interview_file: true
+  field_places: true
   field_taxonomy_squats: true

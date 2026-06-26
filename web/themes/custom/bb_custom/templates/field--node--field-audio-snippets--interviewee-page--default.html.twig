@@ -1,0 +1,24 @@
+{# ==========================================================
+   AUDIO SNIPPETS FIELD
+   Displays timestamp links in a two-column grid
+   ========================================================== #}
+
+{% do attach_library('bb_custom/audio_snippets') %}
+
+
+
+<div class="field--name-field-audio-snippets">
+  {% for item in items %}
+    {% set lines = item.content|render|striptags|trim|split("\n") %}
+    {% for line in lines %}
+      {% set parts = line|split('|') %}
+      {% if parts|length == 2 %}
+        <div class="audio-snippet">
+          <a href="#" data-time="{{ parts[0]|trim }}">
+            {{ parts[1]|trim }}
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

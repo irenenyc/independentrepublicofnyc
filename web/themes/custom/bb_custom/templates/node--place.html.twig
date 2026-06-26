@@ -1,0 +1,12 @@
+{# Node template for Place content type.
+   Renders all fields except field_location, then outputs
+   location as a link to the map centered on that marker. #}
+
+<article{{ attributes }}>
+  {{ content|without('field_location') }}
+  {% if location_map_url %}
+    <div class="field field--name-field-location">
+      <a href="{{ location_map_url }}">{{ location_label }}</a>
+    </div>
+  {% endif %}
+</article>

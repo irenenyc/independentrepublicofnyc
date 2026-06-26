@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: location
 type: location
-description: null
+description: 'just the latitude and longitude'
 help: null
 new_revision: false
 preview_mode: 1

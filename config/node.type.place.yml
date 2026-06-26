@@ -1,0 +1,18 @@
+uuid: 5c1a0b2e-4bcb-409d-8189-d550ec538aca
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Place
+type: place
+description: 'Content type for places that are mentioned in oral history recordings'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

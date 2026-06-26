@@ -1,0 +1,25 @@
+uuid: b579cee6-f38f-41ac-b215-024b275d0ba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: bb_custom_site_branding
+theme: bb_custom
+region: content
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

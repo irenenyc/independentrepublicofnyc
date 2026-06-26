@@ -1,3 +1,6 @@
+
+
+
 /* CARD WRAPPER (Views row class) */
 
 
@@ -6,8 +9,6 @@
   grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
   gap: 1.5rem;
 }
-
-
 
 .grid-card {
   position: relative;        /* anchor for overlay */
@@ -54,21 +55,34 @@
   line-height: 1.25;
 }
 
-/* Makes LES Map span all grid columns so it's full screen */
-.path-les-map .view-content > div {
-  grid-column: 1 / -1;
+
+/* Makes places Map span all grid columns so it's full screen */
+.path-places .view-content > div {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 
+/*make site name be one line*/
+.site-branding__text {
+  font-size: 1.8rem;
+}
 
-/* Makes LOISAIDA Map span all grid columns so it's full screen */
-.path-loisaida-map .view-content > div {
-  grid-column: 1 / -1;
-} 
+/* ==========================================================
+   AUDIO SNIPPETS FIELD
+   Two-column layout for timestamp links
+   ========================================================== */
 
-/*make images smooshed on phone */
-@media (max-width: 768px) {
-  .grid-card__image {
-    aspect-ratio: 4 / 3;
-  }
+.field--name-field-audio-snippets {
+  column-count: 2;
+  column-gap: 2rem;
+  max-width: 800px;
+}
+  
+.audio-snippet {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  padding-bottom: 0.75rem;
+  background: purple;
 }

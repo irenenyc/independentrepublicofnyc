@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.interviewee_page.field_grid_image
     - field.field.node.interviewee_page.field_interviewee_image
     - field.field.node.interviewee_page.field_oh_interview_file
+    - field.field.node.interviewee_page.field_places
     - field.field.node.interviewee_page.field_taxonomy_squats
     - node.type.interviewee_page
     - views.view.interviewee_slideshow
@@ -49,15 +50,15 @@ third_party_settings:
             region: second
             configuration:
               id: 'field_block:node:interviewee_page:field_oh_interview_file'
-              label: 'oh interview file'
-              label_display: '0'
+              label: 'Interview Recording'
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
                 type: entity_reference_entity_view
-                label: above
+                label: hidden
                 settings:
                   view_mode: full
                 third_party_settings: {  }
@@ -68,70 +69,22 @@ third_party_settings:
             region: second
             configuration:
               id: 'field_block:node:interviewee_page:field_audio_snippets'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-          b7e3f7e3-b79d-4178-94fb-0538ddbf61b1:
-            uuid: b7e3f7e3-b79d-4178-94fb-0538ddbf61b1
-            region: first
-            configuration:
-              id: 'field_block:node:interviewee_page:field_taxonomy_squats'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-          982441da-16e2-455d-adae-c1e33059cd56:
-            uuid: 982441da-16e2-455d-adae-c1e33059cd56
-            region: first
-            configuration:
-              id: 'field_block:node:interviewee_page:field_community_gardens'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
-          72c81fa1-fadb-44d6-80c4-95d9e7e81e24:
-            uuid: 72c81fa1-fadb-44d6-80c4-95d9e7e81e24
-            region: first
-            configuration:
-              id: 'field_block:node:interviewee_page:field_community_centers'
-              label: 'Community Centers'
-              label_display: '0'
+              label: 'Interview Highlights'
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
+                type: text_default
+                label: hidden
+                settings: {  }
                 third_party_settings: {  }
-            weight: 6
+            weight: 4
             additional: {  }
           d06055f5-36da-4f2e-a4eb-1c06c213481d:
             uuid: d06055f5-36da-4f2e-a4eb-1c06c213481d
-            region: second
+            region: first
             configuration:
               id: 'field_block:node:interviewee_page:field_basic_biography'
               label: 'basic biography'
@@ -145,7 +98,23 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 5
+            weight: 8
+            additional: {  }
+          15b5885e-62a9-4a5e-bc14-d1b2f0ea5260:
+            uuid: 15b5885e-62a9-4a5e-bc14-d1b2f0ea5260
+            region: first
+            configuration:
+              id: 'field_block:node:interviewee_page:field_places'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
             additional: {  }
         third_party_settings: {  }
 id: node.interviewee_page.default
@@ -203,6 +172,14 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_places:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: first
   field_taxonomy_squats:
     type: entity_reference_label
     label: above

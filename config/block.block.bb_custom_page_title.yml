@@ -1,0 +1,20 @@
+uuid: a30f52f2-ea90-4288-875c-0e356f743cbc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: bb_custom_page_title
+theme: bb_custom
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

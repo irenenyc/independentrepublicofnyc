@@ -1,9 +1,9 @@
-uuid: cad8a9a0-8045-43b9-b3ae-0e225b13dcf3
+uuid: 884e3edf-0090-4548-80ac-d4b0f427f8d6
 langcode: en
 status: true
 dependencies: {  }
-name: Squats
-vid: squats
+name: Location
+vid: location
 description: null
-weight: 0
+weight: -9
 new_revision: false

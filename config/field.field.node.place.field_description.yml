@@ -1,0 +1,26 @@
+uuid: 3d23764e-1d0b-448b-95c9-6844693f7574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - filter.format.basic_html
+    - node.type.place
+  module:
+    - text
+id: node.place.field_description
+field_name: field_description
+entity_type: node
+bundle: place
+label: description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

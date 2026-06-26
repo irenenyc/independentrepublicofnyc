@@ -191,8 +191,8 @@ display:
           time_in_seconds: '2000'
           available_breakpoints: '576'
           arrows: arrows-top
-          navigation: dots
-          animation: a-bottom
+          navigation: none
+          animation: none
           show_total_slides: 0
           show_slide_progress: 0
           show_play_pause: 1

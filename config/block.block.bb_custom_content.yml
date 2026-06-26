@@ -1,0 +1,22 @@
+uuid: 6c66967a-75b5-4cb2-b077-ca0a5d0708f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: bb_custom_content
+theme: bb_custom
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

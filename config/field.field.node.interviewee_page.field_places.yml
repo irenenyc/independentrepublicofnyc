@@ -1,26 +1,26 @@
-uuid: ee387d36-f4bc-49dc-afa7-548d04e24606
+uuid: 4c9b8512-267a-43c4-8714-68d38a026f6a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_image
-    - media.type.image
-    - taxonomy.vocabulary.squats
-id: taxonomy_term.squats.field_image
-field_name: field_image
-entity_type: taxonomy_term
-bundle: squats
-label: image
+    - field.storage.node.field_places
+    - node.type.interviewee_page
+    - node.type.place
+id: node.interviewee_page.field_places
+field_name: field_places
+entity_type: node
+bundle: interviewee_page
+label: places
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      image: image
+      place: place
     sort:
       field: _none
       direction: ASC

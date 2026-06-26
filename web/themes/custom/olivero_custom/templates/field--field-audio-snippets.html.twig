@@ -1,11 +1,10 @@
+{# ==========================================================
+   AUDIO SNIPPETS FIELD
+   Displays timestamp links in a two-column grid
+   ========================================================== #}
 
-{# Attach the JS/CSS library for audio snippets #}
 {% do attach_library('olivero_custom/audio_snippets') %}
 
-
-{#
-  Renders audio snippets as clickable links with data-time.
-#}
 {% if label %}
   <h2>{{ label }}</h2>
 {% endif %}
@@ -16,9 +15,12 @@
     {% for line in lines %}
       {% set parts = line|split('|') %}
       {% if parts|length == 2 %}
-        <a href="#" data-time="{{ parts[0]|trim }}">{{ parts[1]|trim }}</a><br>
+        <div class="audio-snippet">
+          <a href="#" data-time="{{ parts[0]|trim }}">
+            {{ parts[1]|trim }}
+          </a>
+        </div>
       {% endif %}
     {% endfor %}
   {% endfor %}
 </div>
-

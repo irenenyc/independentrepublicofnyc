@@ -7,10 +7,97 @@ dependencies:
     - field.field.node.location.field_coordinates
     - field.field.node.location.field_location_image
     - node.type.location
+    - views.view.related_people
   module:
     - geofield
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c6c77188-d04a-48e7-aa18-4670a7e9b4a0:
+            uuid: c6c77188-d04a-48e7-aa18-4670a7e9b4a0
+            region: content
+            configuration:
+              id: 'extra_field_block:node:location:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          050ee747-627c-4562-98a9-f9a56c9deb3d:
+            uuid: 050ee747-627c-4562-98a9-f9a56c9deb3d
+            region: content
+            configuration:
+              id: 'field_block:node:location:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          54877b5f-3f3c-43ad-b889-87ab1af6f928:
+            uuid: 54877b5f-3f3c-43ad-b889-87ab1af6f928
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_coordinates'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: geofield_default
+                label: above
+                settings:
+                  output_format: wkt
+                  output_escape: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          e402e1e4-e9a9-4681-95b5-99cdef27f180:
+            uuid: e402e1e4-e9a9-4681-95b5-99cdef27f180
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          da7eaffa-2357-4ecf-ab6f-4bd6aef18c34:
+            uuid: da7eaffa-2357-4ecf-ab6f-4bd6aef18c34
+            region: content
+            configuration:
+              id: 'views_block:related_people-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
 id: node.location.default
 targetEntityType: node
 bundle: location

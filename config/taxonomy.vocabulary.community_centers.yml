@@ -5,5 +5,5 @@ dependencies: {  }
 name: 'Community Centers'
 vid: community_centers
 description: null
-weight: 0
+weight: -8
 new_revision: false

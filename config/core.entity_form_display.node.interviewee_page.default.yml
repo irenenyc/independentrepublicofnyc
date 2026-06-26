@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.interviewee_page.field_grid_image
     - field.field.node.interviewee_page.field_interviewee_image
     - field.field.node.interviewee_page.field_oh_interview_file
+    - field.field.node.interviewee_page.field_places
     - field.field.node.interviewee_page.field_taxonomy_squats
     - node.type.interviewee_page
   module:
@@ -94,6 +95,16 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_places:
+    type: entity_reference_autocomplete
+    weight: 130
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_taxonomy_squats:
     type: entity_reference_autocomplete

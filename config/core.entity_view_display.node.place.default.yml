@@ -1,0 +1,150 @@
+uuid: 9b4d5955-d6ae-426b-89fc-93be3744d6c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.place.field_description
+    - field.field.node.place.field_location
+    - field.field.node.place.field_place_image
+    - field.field.node.place.field_place_type
+    - node.type.place
+    - views.view.related_people
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          161f54da-f5c3-4142-a446-9aa49aaf0229:
+            uuid: 161f54da-f5c3-4142-a446-9aa49aaf0229
+            region: first
+            configuration:
+              id: 'field_block:node:place:field_place_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          bd225eed-a83c-4938-9086-a6de9bacfce3:
+            uuid: bd225eed-a83c-4938-9086-a6de9bacfce3
+            region: first
+            configuration:
+              id: 'field_block:node:place:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          38fdea56-9851-4570-b263-8270b622396c:
+            uuid: 38fdea56-9851-4570-b263-8270b622396c
+            region: second
+            configuration:
+              id: 'field_block:node:place:field_place_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          011b8cc0-c68d-4006-bfe4-c8785957d7a8:
+            uuid: 011b8cc0-c68d-4006-bfe4-c8785957d7a8
+            region: second
+            configuration:
+              id: 'views_block:related_people-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          349fff2a-8a0d-4e96-95d4-6a76cc26adf6:
+            uuid: 349fff2a-8a0d-4e96-95d4-6a76cc26adf6
+            region: content
+            configuration:
+              id: 'extra_field_block:node:place:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.place.default
+targetEntityType: node
+bundle: place
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_place_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_place_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

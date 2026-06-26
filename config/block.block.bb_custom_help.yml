@@ -1,0 +1,22 @@
+uuid: a4b3c859-1ba9-44fb-9990-dafd1da1f8bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: bb_custom_help
+theme: bb_custom
+region: content
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

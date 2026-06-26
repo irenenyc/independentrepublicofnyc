@@ -1,0 +1,164 @@
+/* ==================================================
+   THEME CHANGES
+   ================================================== */
+
+/* Add a left border to separate interview highlights from the main content. */
+
+.field--name-field-audio-snippets {
+  border-left: 4px solid #ddd;
+  padding-left: 1.5rem;
+}
+
+/* ==================================================
+   grid changes
+   ================================================== */
+
+
+/* CARD WRAPPER (Views row class) */
+
+
+.view-content {  /*grid for entire page */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-card {
+  position: relative;        /* anchor for overlay */
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGE WRAPPER */
+.grid-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;  
+  overflow: hidden;
+}
+
+/* IMAGE ITSELF */
+.grid-card__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* OVERLAY BAND */
+.grid-card__band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  z-index: 10;
+}
+
+/* OPTIONAL: text cleanup */
+.grid-card__band h3,
+.grid-card__band p {
+  margin: 0;
+  line-height: 1.25;
+}
+
+
+
+/* Cancel Bootstrap's default gutter padding on grid cards */
+.grid-card.views-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+/* Makes places Map span all grid columns so it's full screen */
+.path-places .view-content > div {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+
+/* Makes locations map span all grid columns so it's full width */
+.path-locations .view-content > div {
+  grid-column: 1 / -1;
+}
+
+
+
+
+/* Push the logo image down from the top of the navbar */
+.navbar-brand img {
+  padding-top: 100px;
+}
+
+
+
+
+
+/* ==========================================================
+   AUDIO SNIPPETS FIELD
+   Two-column layout for timestamp links
+   ========================================================== */
+
+.field--name-field-audio-snippets {
+  column-count: 2;
+  column-gap: 2rem;
+  max-width: 800px;
+}
+  
+.audio-snippet {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  padding-bottom: 0.75rem;
+}
+
+
+/* Prevent two-column layout regions from stacking vertically */
+.layout--twocol-section {
+  flex-wrap: nowrap;
+}
+
+
+/* ==================================================
+
+   VIEWS VANILLA JAVASCRIPT SLIDESHOW (VVJS)
+
+   ================================================== */
+
+
+
+.vvjs .vvjs-item-inner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Create a fixed-height image area and center images within it */
+
+.vvjs .vvjs-item-inner {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vvjs .vvjs-item-inner img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Map tweaks */
+.marker-tid {
+  display: none;
+}

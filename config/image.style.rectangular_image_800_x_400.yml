@@ -5,11 +5,11 @@ dependencies: {  }
 name: rectangular_image_800_x_400
 label: 'rectangular image 800 x 400'
 effects:
-  abbfe081-d107-4451-b6d3-193126826369:
-    uuid: abbfe081-d107-4451-b6d3-193126826369
-    id: image_crop
-    weight: 1
+  718eb322-aec5-4325-ac92-d3b89d00ca6b:
+    uuid: 718eb322-aec5-4325-ac92-d3b89d00ca6b
+    id: image_scale
+    weight: -10
     data:
-      width: 800
+      width: 400
       height: 400
-      anchor: center-center
+      upscale: false

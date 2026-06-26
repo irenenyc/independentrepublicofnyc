@@ -1,0 +1,28 @@
+uuid: f57ec751-03d3-4892-be13-c2cddc1f790f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.place.field_description
+    - field.field.node.place.field_location
+    - field.field.node.place.field_place_image
+    - field.field.node.place.field_place_type
+    - node.type.place
+  module:
+    - user
+id: node.place.teaser
+targetEntityType: node
+bundle: place
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_location: true
+  field_place_image: true
+  field_place_type: true

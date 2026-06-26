@@ -1,0 +1,22 @@
+uuid: bbed099a-4d66-45c4-81a1-20c5107ada73
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bb_custom
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: bb_custom_powered
+theme: bb_custom
+region: content
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

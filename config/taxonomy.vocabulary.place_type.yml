@@ -1,0 +1,9 @@
+uuid: 2cce5c10-e8b0-49dc-a10c-fd6a8d08e71e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Place Type'
+vid: place_type
+description: null
+weight: -10
+new_revision: false

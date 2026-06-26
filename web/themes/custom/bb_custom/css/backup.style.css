@@ -1,0 +1,93 @@
+
+
+
+/* CARD WRAPPER (Views row class) */
+
+
+.view-content {  /*grid for entire page */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-card {
+  position: relative;        /* anchor for overlay */
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGE WRAPPER */
+.grid-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;  
+  overflow: hidden;
+}
+
+/* IMAGE ITSELF */
+.grid-card__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* OVERLAY BAND */
+.grid-card__band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  z-index: 10;
+}
+
+/* OPTIONAL: text cleanup */
+.grid-card__band h3,
+.grid-card__band p {
+  margin: 0;
+  line-height: 1.25;
+}
+
+
+/* Makes places Map span all grid columns so it's full screen */
+.path-places .view-content > div {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+
+/*make site name be one line*/
+.site-branding__text {
+  font-size: 1.8rem;
+}
+
+/* ==========================================================
+   AUDIO SNIPPETS FIELD
+   Two-column layout for timestamp links
+   ========================================================== */
+
+.field--name-field-audio-snippets {
+  column-count: 2;
+  column-gap: 2rem;
+  max-width: 800px;
+}
+  
+.audio-snippet {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  padding-bottom: 0.75rem;
+}
+
+
+/* Prevent two-column layout regions from stacking vertically */
+.layout--twocol-section {
+  flex-wrap: nowrap;
+}
