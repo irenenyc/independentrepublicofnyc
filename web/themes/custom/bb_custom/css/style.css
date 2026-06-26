@@ -122,6 +122,8 @@
 
 
 /* Prevent two-column layout regions from stacking vertically */
+/* Desktop only */
+@media (min-width: 769px) {
 .layout--twocol-section {
   flex-wrap: nowrap;
 }
