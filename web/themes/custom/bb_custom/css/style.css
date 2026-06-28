@@ -13,6 +13,14 @@
    grid changes
    ================================================== */
 
+/* Style title links for front page grid cards. */
+.grid-card__title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
 
 /* CARD WRAPPER (Views row class) */
 
@@ -44,7 +52,7 @@
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   object-fit: cover;
   display: block;
 }
