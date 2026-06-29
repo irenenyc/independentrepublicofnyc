@@ -1,6 +1,22 @@
 /* ==================================================
-   THEME CHANGES
+    INTERVIEWEE CONTENT TYPE
    ================================================== */
+
+/* Match the Places field label to the site's H2 heading style. */
+
+.field--name-field-places > .field__label {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .field--name-field-places > .field__label {
+    font-size: 2rem;
+  }
+}
+
 
 /* Add a left border to separate interview highlights from the main content. */
 

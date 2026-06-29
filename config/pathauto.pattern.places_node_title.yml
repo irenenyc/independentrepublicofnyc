@@ -1,0 +1,23 @@
+uuid: 6cc10f91-07d8-4cc2-9910-2c3340cae2dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.place
+  module:
+    - node
+id: places_node_title
+label: 'places/[node:title]'
+type: 'canonical_entities:node'
+pattern: '/places/[node:title]'
+selection_criteria:
+  2ebd23db-97e7-408f-a0e8-76cb74253109:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      place: place
+selection_logic: and
+weight: -5
+relationships: {  }

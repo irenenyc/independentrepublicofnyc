@@ -1,0 +1,23 @@
+uuid: 2898bfe6-f7e2-4ac9-95a0-0234e62d4371
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.interviewee_page
+  module:
+    - node
+id: people_node_title
+label: 'people/[node:title]'
+type: 'canonical_entities:node'
+pattern: '/people/[node:title]'
+selection_criteria:
+  f49c84e5-54b8-4d94-b9a1-ff91497a5979:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      interviewee_page: interviewee_page
+selection_logic: and
+weight: -5
+relationships: {  }
