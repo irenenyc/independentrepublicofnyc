@@ -26,6 +26,27 @@
 }
 
 /* ==================================================
+   Places content type
+   ================================================== */
+
+/* Match the Location field label to the site's H2 heading style. */
+
+.field--name-field-location > .field__label {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .field--name-field-location > .field__label {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* ==================================================
    grid changes
    ================================================== */
 

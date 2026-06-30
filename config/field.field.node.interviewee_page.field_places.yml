@@ -10,7 +10,7 @@ id: node.interviewee_page.field_places
 field_name: field_places
 entity_type: node
 bundle: interviewee_page
-label: Places
+label: 'Related Places'
 description: ''
 required: false
 translatable: false
