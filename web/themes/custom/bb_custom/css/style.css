@@ -25,6 +25,14 @@
   padding-left: 1.5rem;
 }
 
+/* Add a top border to separate the biography from the main content. */
+
+.field--name-field-basic-biography {
+  border-top: 4px solid #ddd;
+  padding-top: 1.5rem;
+}
+
+
 /* ==================================================
    Places content type
    ================================================== */
