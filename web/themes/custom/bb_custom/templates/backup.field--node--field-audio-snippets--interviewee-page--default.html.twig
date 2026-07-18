@@ -13,11 +13,11 @@
     {% for line in lines %}
       {% set parts = line|split('|') %}
       {% if parts|length == 2 %}
-        <a class="audio-snippet" href="#" data-time="{{ parts[0]|trim }}">
-          <span class="audio-snippet__title">
+        <div class="audio-snippet">
+          <a href="#" data-time="{{ parts[0]|trim }}">
             {{ parts[1]|trim }}
-          </span>
-        </a>
+          </a>
+        </div>
       {% endif %}
     {% endfor %}
   {% endfor %}

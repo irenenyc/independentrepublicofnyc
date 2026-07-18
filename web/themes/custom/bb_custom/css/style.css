@@ -2,7 +2,7 @@
     INTERVIEWEE CONTENT TYPE
    ================================================== */
 
-/* Match the Places field label to the site's H2 heading style. */
+/* Match the Places field label in Interviewee content type to the site's H2 heading style. */
 
 .field--name-field-places > .field__label {
   margin-top: 0;
@@ -31,6 +31,93 @@
   border-top: 4px solid #ddd;
   padding-top: 1.5rem;
 }
+
+
+/* ==========================================================
+   AUDIO SNIPPETS FIELD
+   Two-column layout for timestamp links
+   ========================================================== */
+
+
+
+.field--name-field-audio-snippets {
+  column-count: 2;
+  column-gap: .5rem;
+  max-width: 900px;
+  width: 900px !important;
+}
+  
+.audio-snippet {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.8rem 0.2rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+  position: relative;
+}
+
+.audio-snippet::before {
+  content: "▸";
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #005a9c;
+}
+
+.audio-snippet:hover {
+  background-color: #f4f4f4;
+}
+
+.audio-snippet__title {
+  display: block;
+  color: #005a9c;
+  line-height: 1.4;
+}
+
+
+/* Prevent two-column layout regions from stacking vertically */
+/* Desktop only */
+@media (min-width: 769px) {
+.layout--twocol-section {
+  flex-wrap: nowrap;
+}
+
+
+/* ==================================================
+
+   VIEWS VANILLA JAVASCRIPT SLIDESHOW (VVJS)
+
+   ================================================== */
+
+/* Create a fixed-height image area and center images within it */
+.vvjs .vvjs-item-inner {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vvjs .vvjs-item-inner img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+}
+
+/* Map tweaks */
+.marker-tid {
+  display: none;
+}
+
 
 
 /* ==================================================
@@ -144,76 +231,8 @@
 }
 
 
-
-
 /* Push the logo image down from the top of the navbar */
 .navbar-brand img {
   padding-top: 100px;
 }
 
-
-
-
-
-/* ==========================================================
-   AUDIO SNIPPETS FIELD
-   Two-column layout for timestamp links
-   ========================================================== */
-
-.field--name-field-audio-snippets {
-  column-count: 2;
-  column-gap: 2rem;
-  max-width: 800px;
-}
-  
-.audio-snippet {
-  display: block;
-  width: 100%;
-  break-inside: avoid;
-  padding-bottom: 0.75rem;
-}
-
-
-/* Prevent two-column layout regions from stacking vertically */
-/* Desktop only */
-@media (min-width: 769px) {
-.layout--twocol-section {
-  flex-wrap: nowrap;
-}
-
-
-/* ==================================================
-
-   VIEWS VANILLA JAVASCRIPT SLIDESHOW (VVJS)
-
-   ================================================== */
-
-
-
-.vvjs .vvjs-item-inner img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-/* Create a fixed-height image area and center images within it */
-
-.vvjs .vvjs-item-inner {
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vvjs .vvjs-item-inner img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: 400px;
-}
-
-/* Map tweaks */
-.marker-tid {
-  display: none;
-}

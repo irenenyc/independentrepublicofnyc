@@ -1,3 +1,156 @@
+/* ==================================================
+    INTERVIEWEE CONTENT TYPE
+   ================================================== */
+
+/* Match the Places field label in Interviewee content type to the site's H2 heading style. */
+
+.field--name-field-places > .field__label {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .field--name-field-places > .field__label {
+    font-size: 2rem;
+  }
+}
+
+
+/* Add a left border to separate interview highlights from the main content. */
+
+.field--name-field-audio-snippets {
+  border-left: 4px solid #ddd;
+  padding-left: 1.5rem;
+}
+
+/* Add a top border to separate the biography from the main content. */
+
+.field--name-field-basic-biography {
+  border-top: 4px solid #ddd;
+  padding-top: 1.5rem;
+}
+
+
+/* ==========================================================
+   AUDIO SNIPPETS FIELD
+   Two-column layout for timestamp links
+   ========================================================== */
+
+
+
+.field--name-field-audio-snippets {
+  column-count: 2;
+  column-gap: .5rem;
+  max-width: 900px;
+  width: 900px !important;
+}
+  
+.audio-snippet {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.audio-snippet:hover {
+  background-color: #f4f4f4;
+}
+
+.audio-snippet__title {
+  display: block;
+  color: #005a9c;
+  line-height: 1.4;
+}
+
+.audio-snippet:hover .audio-snippet__title {
+  text-decoration: underline;
+}
+
+
+/* Prevent two-column layout regions from stacking vertically */
+/* Desktop only */
+@media (min-width: 769px) {
+.layout--twocol-section {
+  flex-wrap: nowrap;
+}
+
+
+/* ==================================================
+
+   VIEWS VANILLA JAVASCRIPT SLIDESHOW (VVJS)
+
+   ================================================== */
+
+
+
+.vvjs .vvjs-item-inner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Create a fixed-height image area and center images within it */
+
+.vvjs .vvjs-item-inner {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vvjs .vvjs-item-inner img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Map tweaks */
+.marker-tid {
+  display: none;
+}
+
+
+
+/* ==================================================
+   Places content type
+   ================================================== */
+
+/* Match the Location field label to the site's H2 heading style. */
+
+.field--name-field-location > .field__label {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .field--name-field-location > .field__label {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* ==================================================
+   grid changes
+   ================================================== */
+
+/* Style title links for front page grid cards. */
+.grid-card__title a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 
 
@@ -31,7 +184,7 @@
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   object-fit: cover;
   display: block;
 }
@@ -56,6 +209,15 @@
 }
 
 
+
+/* Cancel Bootstrap's default gutter padding on grid cards */
+.grid-card.views-row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
 /* Makes places Map span all grid columns so it's full screen */
 .path-places .view-content > div {
   grid-column-start: 1;
@@ -63,31 +225,14 @@
 }
 
 
-/*make site name be one line*/
-.site-branding__text {
-  font-size: 1.8rem;
-}
-
-/* ==========================================================
-   AUDIO SNIPPETS FIELD
-   Two-column layout for timestamp links
-   ========================================================== */
-
-.field--name-field-audio-snippets {
-  column-count: 2;
-  column-gap: 2rem;
-  max-width: 800px;
-}
-  
-.audio-snippet {
-  display: block;
-  width: 100%;
-  break-inside: avoid;
-  padding-bottom: 0.75rem;
+/* Makes locations map span all grid columns so it's full width */
+.path-locations .view-content > div {
+  grid-column: 1 / -1;
 }
 
 
-/* Prevent two-column layout regions from stacking vertically */
-.layout--twocol-section {
-  flex-wrap: nowrap;
+/* Push the logo image down from the top of the navbar */
+.navbar-brand img {
+  padding-top: 100px;
 }
+
