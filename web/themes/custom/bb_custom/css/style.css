@@ -1,3 +1,52 @@
+html {
+  background: #fff;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+}
+
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .layout--twocol-section {
+    flex-wrap: wrap !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .field--name-field-audio-snippets {
+    column-count: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .audio-snippet {
+    border: none !important;
+    border-radius: 0;
+     position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+.audio-snippet:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background: #ddd;
+  }
+}
+
+
+
 /* ==================================================
     INTERVIEWEE CONTENT TYPE
    ================================================== */
@@ -39,14 +88,17 @@
    ========================================================== */
 
 
-
+@media (min-width: 769px) {
 .field--name-field-audio-snippets {
   column-count: 2;
   column-gap: .5rem;
   max-width: 900px;
   width: 900px !important;
 }
-  
+}
+
+
+
 .audio-snippet {
   display: block;
   width: 100%;
@@ -87,6 +139,9 @@
 .layout--twocol-section {
   flex-wrap: nowrap;
 }
+}
+
+
 
 
 /* ==================================================
