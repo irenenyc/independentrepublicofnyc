@@ -206,7 +206,6 @@ body {
 /* put space under related people */
 @media (max-width: 768px) {
   .block-views-blockrelated-people-block-1 {
-    border-bottom: 1px solid #ddd;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
