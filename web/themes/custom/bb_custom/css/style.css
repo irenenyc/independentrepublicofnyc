@@ -194,6 +194,11 @@ body {
   }
 }
 
+/* get rid of space between related people */
+.view-related-people .view-content {
+  gap: .225rem;
+}
+
 
 
 /* ==================================================
