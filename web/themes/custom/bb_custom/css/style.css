@@ -81,6 +81,17 @@ body {
   padding-top: 1.5rem;
 }
 
+/* Related Places has padding and a lined border */
+.field--name-field-places {
+  border-top: 3px solid #ddd;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+
+
+
 
 /* ==========================================================
    AUDIO SNIPPETS FIELD
